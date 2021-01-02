@@ -4,48 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-</head>
-<body style="margin: 0;">
-    <div style="background-color: #2b42a6; display: flex;">
-        <h2 style="color: white; padding-left: 10px;">Bulan Store</h2>
-    </div>
+    <link rel="stylesheet" href="./css/register.css">
     
-    <div style="background-color: #b6e5fc; text-align: center; padding: 10px;">
-    <form action="" method="POST">
-        <h3><b>Join Bulan Community Now!</b></h3>
-        <label style="color: black;"><b>Email</b></label><br>
-        <input type="email" name="email" id="email" placeholder="Enter Email"><br><br>
-
-        <label style="color: black;"><b>Username</b></label><br>
-        <input type="text" name="Username" id="Username" placeholder="Enter Username"><br><br>
-
-        <Label style="color: black;"><b>Password</b></Label><br>
-        <input type="password" name="password" id="password" placeholder="Password"><br><br>
-
-        <label style="color: black;"><b>Confirm Password</b></label><br>
-        <input type="password" name="conf_password" id="conf_password" placeholder="Confirm Password"><br><br>
-        
-        If you click "Register Now!" you will be registered and you agree to Bulan's Terms of service and Privacy policy.
-        <br><input type="button" value="Register Now!" style="padding-bottom: 5px;">
-    </form>
-    </div>
-
-    <div style="background-color: #2b42a6; padding: 10px;">
-        <div style=" display: flex; flex-direction: row; justify-content: space-between;">
-            
-            <div>
-                <h4 style="color: white; font-size: small;">Copyright © Bulan Corp. 2020. All Rights Reserved.</h4>
-            </div>
-
-            <div style="display: flex;">
-                <h4 style="color: white; ">Follow our Social Media! : </h6>
-                <a href="https://twitter.com/Opacite101"><img src="./assets/twitter.png" alt="" width="30px" height="30px" style="padding: 5px;"></a>
-                <a href="https://www.instagram.com/alexndrmichael/"><img src="./assets/instagram.jpg" alt="" width="30px" height="30px" style="padding:5px ;"></a>
-            </div>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <a class="title" href="./Home.html"><h2 class="storeName">Bulan Store</h2></a>
         </div>
 
+        <div class="topnav" id="myTopnav">
+            <a href="./Home.html">Home</a>
+            
+            <div class="dropdown"">
+                <button class="dropbtn">Category
+                    <i></i>
+                </button>
+                    
+                <div class="dropdown-content" >
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                </div>
+            </div>
 
+            <a href="./Register.html"  class="active"">Register</a>
+            <a href="./AboutUs.html">About Us</a>
+        </div>
+    </div>
+    
+    <div class="main-body">
+        <fieldset class="reg-form">
+        
+            <h3><b>Join Bulan Community Now!</b></h3>
+            
+            <img src="./assets/Logo.jpg" alt="Logo" height="175px" width="175px">
+
+            <form action="./Home.html" style="padding: 10px;" onsubmit="validateForm(event)">
+                <label class="email"><b>Email</b></label><br>
+                <input required type="email" name="email" id="email" placeholder="Enter Email"><br><br>
+
+                <label class="username""><b>Username</b></label><br>
+                <input required type="text" name="Username" id="Username" placeholder="Enter Username"><br><br>
+
+                <Label class="password"><b>Password</b></Label><br>
+                <input required type="password" name="password" id="password" placeholder="Password"><br><br>
+
+                <label class="re-password"><b>Confirm Password</b></label><br>
+                <input required type="password" name="conf_password" id="conf_password" placeholder="Confirm Password"><br><br>
+                
+                <b>If you click "Register Now!" you will be registered and you agree to Bulan's <a href="./ToSPP.html">Terms of service</a> and <a href="./ToSPP.html">Privacy policy</a>.</b>
+                <br><input class="reg-button" type="submit" value="Register Now!" id="submit-btn">
+            </form>
+        
+        </fieldset>
     </div>
 
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-subcontainer">
+                    
+                <div>
+                    <h4 class="copyright">Copyright © Bulan Corp. 2020. All Rights Reserved.</h4>
+                </div>
+        
+                <div class="social-media">
+                    <h4 class="social-header">Follow our Social Media! : </h6>
+                    <a href="https://twitter.com/Opacite101"><img class="insta" src="./assets/twitter.png" alt="" width="30px" height="30px"></a>
+                    <a href="https://www.instagram.com/alexndrmichael/"><img class="twitter" src="./assets/instagram.jpg" alt="" width="30px" height="30px"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
 </body>
+
+
 </html>
